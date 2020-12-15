@@ -1,0 +1,26 @@
+.container
+{
+   background-color: #eee;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+
+}
+.holder
+{
+   width: 375rpx;
+   height: 375rpx;
+   border-radius: 60%;
+}
+.btn-index{
+   width: 50%;
+   margin-top: 20rpx;
+   background-color: beige;
+   color: black;
+   border-radius: 90rpx; 
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+ }

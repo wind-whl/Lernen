@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="coutainer">
+<text>\n</text>
+<text>\n</text>
+<text>\n</text>
+<view class="fff">
+<input class="inputindex" placeholder="关键词" placeholder-class='iconfont icon-sousuo mid-font ' placeholder-style="font-size:30px; color:#778899;" style="font-weight:bolder; font-size:30px; color:#999999; padding-left: 30rpx;text-align:center;padding-right:30rpx" bindinput="abc"> </input>
+</view>
+
+
+<button class="btn-index" bindtap="send">
+<image class='btnImg' open-type='openSetting' src="/images/搜索.png"></image>
+<view>点击查询</view>
+</button>
+<text>\n</text>
+  <view class="motto">{{motto}}</view>
+<import src="../../wxParse/wxParse.wxml"/>
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+<view class="bg" style="opacity:{{0.4}}" >
+    <image class="bg-image" mode="scaleToFill"></image>
+</view>
+</view>

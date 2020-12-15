@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container"  bindtap="bindViewTap"  >
+
+
+<!-- 顶部条 -->
+<view class="nav">
+  
+</view>
+
+
+
+<!--年圆圈  -->
+     <view class="year-circle"> 
+      <view class="inner">
+        <view class="spiner" style="transform:rotate({{spinerTrans}}deg);transition:transform {{spinerSpeed}}s linear"></view>
+        <view class="masker"></view>
+        <view class="filler" style="display:{{fillerData}};transform:rotate({{fillerTrans}}deg);transition:transform {{fillerSpeed}}s linear"></view>
+      </view>
+     </view> 
+    <text class="year-text" style="filter: grayscale({{textGray}});transition:all {{textSpeed}}s linear">{{year}}</text>
+    
+    
+    
+<!--文字栏  -->
+    <view class="info" >
+        <text class="info-text">{{year}}年已经过去{{per}}%
+        <text class="info-name">{{name}}</text>
+            你的年度计划完成了多少呢？
+        </text>
+        <text class="info-text"><text class="redx">今日名言：</text>{{content}}          by{{author}}</text>
+    </view>
+
+
+
+<!--底部条 -->
+<view class="nav">
+  
+</view>
+
+
+</view>

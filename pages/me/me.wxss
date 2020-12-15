@@ -1,0 +1,41 @@
+.container
+{
+   
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+
+}
+.holder
+{
+   width: 375rpx;
+   height: 375rpx;
+   border-radius: 60%;
+}
+.btn-index{
+   width: 50%;
+   margin-top: 20rpx;
+   background-color: beige;
+   color: black;
+   border-radius: 90rpx; 
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+ }
+ .bg{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: url('http://hbimg.b0.upaiyun.com/eb31a2ec0af01be74bbce09006ee5d47f0b4f837302ca-OzN53Y_fw658') 
+  no-repeat #000;
+  background-size:cover;
+  z-index:-1;
+  }
+  .bg-image{
+      width : 100%;
+      height : 100%;
+  }

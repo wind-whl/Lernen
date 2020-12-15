@@ -1,0 +1,5 @@
+<view class="container">
+  <image class="holder" src="/images/图书馆.png"></image>
+  <text style="font-weight:bold; font-size:60rpx" >电子书库</text>
+  <button class="btn-index" bindtap="跳转">进入</button>
+</view>

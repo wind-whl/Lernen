@@ -1,0 +1,11 @@
+.bm{
+  width: 50%;
+  margin-top: 20rpx;
+  background-color: rgb(10, 241, 21);
+  color: rgb(247, 241, 241);
+  border-radius: 90rpx; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

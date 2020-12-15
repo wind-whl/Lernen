@@ -1,0 +1,11 @@
+<view class="container">
+ 
+  <text style="font-weight:bold; font-size:60rpx" >My Memo</text>
+  <button class="btn-index" bindtap="跳转1">我的年计划</button>
+  <button class="btn-index" bindtap="跳转2">我的月计划</button>
+  <button class="btn-index" bindtap="跳转3">我的日计划</button>
+
+  <view class="bg" style="opacity:{{0.4}}" >
+    <image class="bg-image" mode="scaleToFill"></image>
+   </view>
+</view>

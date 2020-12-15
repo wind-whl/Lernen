@@ -1,0 +1,7 @@
+<button class="bm" bindtap="download1"> 《大学物理学 上》</button>
+<button class="bm" bindtap="download2"> 《大学物理学 中》</button>
+<button class="bm" bindtap="download3"> 《大学物理学 下》</button>
+<button class="bm" bindtap="download4"> 高等数学  北邮第2版 上</button>
+<button class="bm" bindtap="download5"> 高等数学  北邮第2版 下</button>
+<button class="bm" bindtap="download6"> 工科数学分析基础 上册</button>
+<button class="bm" bindtap="download7"> 工科数学分析基础 上册</button>

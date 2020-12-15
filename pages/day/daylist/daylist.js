@@ -1,0 +1,81 @@
+var util = require('../../../utils/util')
+
+Page({
+  data: {
+    data: {}
+  },
+  onLoad: function (option) {
+    let self = this;
+    let id = option.id;
+    let AllDatas = wx.getStorageSync('tasksData2');
+    AllDatas.map(function(obj) {
+      if(obj.id == id) {
+        wx.setNavigationBarTitle({
+          title: obj.value
+        });
+        self.setData({
+          data: obj
+        });
+      }
+    })
+  },
+
+
+
+
+
+//改变任务状态  
+  changeStatus: function(e){
+    let AllDatas = wx.getStorageSync('tasksData2');
+    let index = e.target.dataset.index;//当前点击的对象在全局列表中的index
+    let thisData = this.data.data;
+    thisData.finshed = !thisData.finshed;
+
+    AllDatas.map(function(obj){
+      if(obj.id == index){
+        obj.finshed = !obj.finshed;
+      }
+    });
+    /*for (var i = 0; i < AllDatas.length; i++) {
+        if(AllDatas[i].id == index){
+          AllDatas[i] = thisData
+        }
+    }*/
+
+    this.setData({
+      data: thisData
+    });
+    wx.setStorageSync('tasksData2', AllDatas);
+  },
+
+
+
+  
+  addDetail: function(e){
+    let AllDatas = wx.getStorageSync('tasksData2');
+    let thisData = this.data.data;
+    
+    let val = e.detail.value.trim()
+    console.log(e)
+    if(val){//有内容
+      AllDatas.map(function(obj) {
+        if(obj.id == thisData.id) {
+          thisData.nocontent = false;
+          thisData.content = val;
+          obj.nocontent = false;
+          obj.content = val;
+        }
+      })
+    }else{
+      AllDatas.map(function(obj) {
+        if(obj.id == thisData.id) {
+          thisData.nocontent = true;
+          thisData.content = '';
+          obj.nocontent = true;
+          obj.content = '';
+        }
+      })
+    }
+    wx.setStorageSync('tasksData2', AllDatas);
+  }
+})

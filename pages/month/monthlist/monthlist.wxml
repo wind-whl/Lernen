@@ -1,0 +1,40 @@
+<!--logs.wxml-->
+<view class="container1">
+  
+  <!--标记安排的事情已完成或未完成-->
+  <checkbox-group class="setDate clearfix" bindchange="changeStatus" data-index="{{data.id}}">
+        <view class="finshed"><checkbox checked="{{data.finshed}}"color="#c1c8d0"  /></view> 
+        <view class="item_con">创建时间：{{data.time}}</view>  
+    
+
+
+  </checkbox-group>
+
+
+  <view class="content">
+
+     <!--事件的标题-->
+     <view class="title">
+      <text class="flex1">标题：</text> 
+      <text class="flex7">{{data.value}}</text>           
+    </view>     
+
+
+     
+
+    <!--事件的状态-->
+    <view class="status">
+      <text class="flex1">状态:</text>
+      <text class="flex7" wx:if="{{data.finshed}}">已完成</text>
+      <text class="flex7" wx:if="{{!data.finshed}}">未完成</text>
+    </view>
+    
+    
+    <view class="task_con">
+      <!--输入框-->
+      <textarea  auto-height  placeholder="内容......" maxlength="-1" bindinput="addDetail" value="{{data.content}}"/>
+    </view>
+  </view>
+
+
+</view>

@@ -1,0 +1,54 @@
+.inputindex{
+  color:aliceblue;
+  border-radius: 15px;
+  margin: 0 0 0px 0px;
+  width: 400rpx;
+  height: 2.8rem;
+  min-height: 2.8rem;
+  border:2px solid rgb(134, 131, 131);
+
+}
+.fff{
+  display:flex;
+  align-items:center;
+justify-content:center;
+width:100%;
+height:100%;
+margin-top:10px;
+}
+.btn-index{
+  width: 50%;
+  margin-top: 20rpx;
+  background-color: beige;
+  color: black;
+  border-radius: 90rpx; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: url('http://i0.hdslb.com/bfs/article/f88bcd431bf3ee9f04c737f8ec29fca07bd30bb8.jpg') 
+no-repeat #000;
+background-size:cover;
+z-index:-1;
+}
+.bg-image{
+    width : 100%;
+    height : 100%;
+}
+.motto{
+  text-align:center;
+  font-size:27px;
+  color:rgb(11, 22, 22);
+}
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}

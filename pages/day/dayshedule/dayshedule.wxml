@@ -1,0 +1,61 @@
+<view class="container1">
+  
+  <scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" class="tasks">
+    
+    <!--新增任务-->
+    <checkbox-group  bindchange="changeStatus" class="new_tasks clearfix" wx:for="{{TaskItems2}}" hidden="{{item.finshed}}" data-index="{{item.id}}" bindtap="taskDetail" bindtouchstart="mytouchstart" bindtouchend="mytouchend">
+      
+        <view class="item_checkbox">
+            <checkbox   value="{{item.value}}" checked="{{item.finshed}}"   />
+        </view>
+
+        
+        <view class="item_con" data-index="{{item.id}}" >{{item.value}}</view>
+        
+      
+        <view class="item_ico">{{item.day}}</view>
+      
+    </checkbox-group>
+    
+    
+    <!--提示条-->
+    <view class="finish_tip">已完成</view>
+    
+    
+    <!--已完成任务-->
+    <checkbox-group class="finish_tasks clearfix" bindchange="changeStatus" wx:for="{{TaskItems2}}" hidden="{{!item.finshed}}" data-index="{{item.id}}" bindtap="taskDetail" bindtouchstart="mytouchstart" bindtouchend="mytouchend">
+        <view class="item_checkbox">
+            <checkbox color="#c1c8d0" data-hi="{{item.id}}" value="{{item.value}}"  checked="{{item.finshed}}"/>
+        </view>
+        
+        <view class="item_con" data-index="{{item.id}}">{{item.value}}</view>
+        
+        
+        <view class="icon item_ico" >{{item.day}}</view>
+    </checkbox-group>
+    
+  </scroll-view>
+  
+
+  <!--！任务输入框-->
+  <view class="task_inputBox">
+  
+    <view class="task_date">  
+    
+      <picker mode="date" value="{{date}}" start="2017-07-01" end="2019-07-01" bindchange="bindDateChange">
+         <view class="picker">
+          {{day}}
+         </view>
+      </picker>
+  
+    </view>
+
+
+    <input class="task_input" focus="{{focus}}" placeholder-style="color:#d1d4db" placeholder="准备做些什么？" bindinput="getInputTask" value="{{newTask}}"/>
+    
+    <!-- 确认键小图标 -->
+    <view class="icon iconfont icon--fabu task_create" bindtap="newTask"></view>
+  </view>
+
+
+</view>

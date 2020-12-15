@@ -1,0 +1,4 @@
+<view class="container">
+  <image class="holder" src="/images/bj.jpg"></image>
+  <text style="font-weight:bold; font-size:60rpx" >Lernen ohne Grenze</text>
+</view>
